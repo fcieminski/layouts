@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    width: 98px;
+    height: 45px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    border: solid 1px #1DA1F2;
+    color: #1DA1F2;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #EAF5FD;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px auto 42px;
+    width: 100%;
+    height: 100vh;
+}
+
+.left {
+    background-image: url(img/twitter-background-fixed.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #1DA1F2;
+    grid-row: 1 / 3
+}
+
+.form {
+    background-color: #ffffff;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.right {
+    background-color: #ffffff;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    overflow: hidden;
+}
+
+.footer {
+    background-color: #ffffff;
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+    border-top: solid 1px #b8b8b8;
+}
+
+
+/* left side */
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.left-text h2 {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.left-text h2 span {
+    font-size: 2.5rem;
+    vertical-align: middle;
+}
+
+
+/* right side */
+
+.right {
+    display: flex;
+    align-self: center;
+}
+
+.right-panel {
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 350px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-self: center;
+}
+
+.right-panel h3 {
+    font-size: 1.7rem;
+    overflow: hidden;
+}
+
+.btn {
+    width: 350px;
+    height: 34px;
+}
+
+.blue {
+    color: #ffffff;
+    background-color: #1DA1F2;
+    margin-bottom: 16px;
+}
+
+.blue:hover {
+    background-color: #006DBF;
+}
+
+.right-panel>p {
+    font-size: 1.125rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin-bottom: 16px;
+    margin-top: 48px;
+}
+
+.logo {
+    display: flex;
+    max-width: 350px;
+    max-height: 50px;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo button {
+    display: none;
+    order: 2;
+}
+
+
+/* form right */
+
+.form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.form input {
+    margin: 10px;
+    max-width: 200px;
+    height: 45px;
+    border: solid 1px #b8b8b8;
+    flex-grow: 1;
+}
+
+.form>button {
+    margin-right: 10px;
+}
+
+.password {
+    position: relative;
+}
+
+.password-under {
+    position: absolute;
+    left: 10px;
+}
+
+.password-under>a {
+    text-decoration: none;
+    color: #b8b8b8;
+}
+
+
+/* footer */
+
+.footer ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.footer ul li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.7rem;
+}
+
+.footer ul li:hover {
+    cursor: pointer;
+    border-bottom: solid 1px #b8b8b8;
+}
+
+ul {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bottom-nav {
+    height: 100%;
+}
+
+ul li {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #b8b8b8;
+}
+
+li:hover {
+    border-bottom: solid 1px #b8b8b8;
+}
+
+
+/* media queries */
+
+@media (max-width: 1020px) {
+    .form {
+        display: none;
+    }
+    .logo button {
+        display: block;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .right {
+        order: 1;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .left {
+        order: 2;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-position: right;
+        background-size: contain;
+    }
+    .footer {
+        order: 3;
+        position: absolute;
+        bottom: 0;
+    }
+    .bottom-nav {
+        flex-wrap: wrap;
+    }
+}
+
+
+}
